@@ -1,15 +1,17 @@
-// import button from '../components/button/index';
-// export default button;
 import VueMappButton from '../components/button/index';
+import VueMappCheckbox from '../components/checkbox/index';
+
 import Vue, { VueConstructor } from 'vue';
 
-// export default function(Vue: VueConstructor) {
-//     Vue.component('vm-button', VueMappButton);
-// }
+export default function(Vue: VueConstructor, options: any) {
+    Vue.component('vm-button', VueMappButton);
+    Vue.component('vm-checkbox', VueMappCheckbox);
+}
 
-// export {
-//     VueMappButton
-// }
+export {
+    VueMappButton,
+    VueMappCheckbox
+}
 
 // const test = {
 //     install() {
@@ -17,15 +19,11 @@ import Vue, { VueConstructor } from 'vue';
 //     }
 // }
 
-const test = '123';
-
-export default {
-    install: function(Vue: VueConstructor){
-        Vue.component('Clock', VueMappButton)
-    }
-};
-
-export { test };
+// export default {
+//     install: function(Vue: VueConstructor) {
+//         Vue.component('vm-button', VueMappButton)
+//     }
+// };
 
 // if (typeof window !== 'undefined' && window.Vue) {
 //     window.Vue.use(Clock)

@@ -4,22 +4,23 @@
   / function
  */
 
-// declare function VueMapp (Vue: any, options?: any): void;
+declare function VueMapp (Vue: any, options?: any): void;
 
   /*
   / object
  */
 
-declare var test: string;
 
-declare namespace VueMapp {
-  function install(Vue: any, options?: any): void;
-}
+// declare namespace VueMapp {
+//   function install(Vue: any, options?: any): void;
+// }
 
   /*
-  / export default
+  / export
  */
 
 export default VueMapp;
 
-export { test };
+export {
+  VueMapp
+}

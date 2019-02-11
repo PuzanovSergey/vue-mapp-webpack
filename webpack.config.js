@@ -21,6 +21,20 @@ let config = {
 
     // libraryExport: 'default'
   },
+  externals: {
+    vuePropertyDecorator: {
+      commonjs: 'vue-property-decorator',
+      commonjs2: 'vue-property-decorator',
+      amd: 'vue-property-decorator',
+      root: '_'
+    },
+    vue: {
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue',
+      root: '_'
+    }
+  },
   module: {
     rules: [
       {
@@ -46,7 +60,7 @@ let config = {
         test: /\.scss$/,
         use: [
           //   'vue-style-loader', // creates style nodes from JS strings
-          MiniCssExtractPlugin.loader,
+          // MiniCssExtractPlugin.loader,
           // devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader', // translates CSS into CommonJS (interprets @import and url() like import/require())
           'sass-loader' // compiles Sass to CSS, using Node Sass by default
